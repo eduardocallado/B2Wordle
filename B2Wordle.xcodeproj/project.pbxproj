@@ -17,6 +17,8 @@
 		D109EBBB27C405BA009660B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109EB9127C405B9009660B6 /* ContentView.swift */; };
 		D109EBBC27C405BA009660B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D109EB9227C405BA009660B6 /* Assets.xcassets */; };
 		D109EBBD27C405BA009660B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D109EB9227C405BA009660B6 /* Assets.xcassets */; };
+		D109EBCD27C42D8F009660B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109EBCC27C42D8F009660B6 /* ViewModel.swift */; };
+		D109EBCE27C42D8F009660B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109EBCC27C42D8F009660B6 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		D109EBB027C405BA009660B6 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D109EBB427C405BA009660B6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		D109EBB627C405BA009660B6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		D109EBCC27C42D8F009660B6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			children = (
 				D109EB9027C405B9009660B6 /* B2WordleApp.swift */,
 				D109EB9127C405B9009660B6 /* ContentView.swift */,
+				D109EBCC27C42D8F009660B6 /* ViewModel.swift */,
 				D109EB9227C405BA009660B6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -300,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109EBBA27C405BA009660B6 /* ContentView.swift in Sources */,
+				D109EBCD27C42D8F009660B6 /* ViewModel.swift in Sources */,
 				D109EBB827C405BA009660B6 /* B2WordleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109EBBB27C405BA009660B6 /* ContentView.swift in Sources */,
+				D109EBCE27C42D8F009660B6 /* ViewModel.swift in Sources */,
 				D109EBB927C405BA009660B6 /* B2WordleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
