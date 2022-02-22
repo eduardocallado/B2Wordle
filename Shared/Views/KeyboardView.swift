@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct Keyboard: View {
-	@ObservedObject var viewModel: ViewModel // State ?
+	@ObservedObject var viewModel: ViewModel
+	
+	var initialScale = 1.0
+	var finalScale = 1.3
+	
+	@State var scale: [String: Double] = [:]
 	
 	let firstLine = "QWERTYUIOP".map{ String($0) }
 	let secondLine = "ASDFGHJKL".map{ String($0) }
@@ -42,17 +47,26 @@ struct Keyboard: View {
 						
 						viewModel.addLetter(letter: letter)
 					}
+					
+					withAnimation {
+						scale[letter] = finalScale
+					}
 				} label: {
 					Text(letter)
 						.textCase(.uppercase)
+					
+						.frame(minWidth: minWidth, maxWidth: .infinity, minHeight: 48, alignment: .center)
+						.background(backgroundColor)
+						.cornerRadius(4)
+						.foregroundColor(Color.white)
+						.font(.system(size: ["⏎", "⌫"].contains(letter) ? 22 : 18,
+									  weight: ["⏎", "⌫"].contains(letter) ? .semibold : .medium))
+						.scaleEffect(scale[letter] ?? 1)
+						.animation(.easeInOut(duration: 0.1), value: scale[letter])
+						.animationObserver(for: scale[letter] ?? initialScale, onComplete:  {
+							scale[letter] = initialScale
+						})
 				}
-				.frame(minWidth: minWidth, maxWidth: .infinity, minHeight: 48, alignment: .center)
-				.background(backgroundColor)
-				.cornerRadius(4)
-				.foregroundColor(Color.white)
-				.font(.system(size: ["⏎", "⌫"].contains(letter) ? 22 : 18,
-							  weight: ["⏎", "⌫"].contains(letter) ? .semibold : .medium))
-				
 			}
 		}
 	}

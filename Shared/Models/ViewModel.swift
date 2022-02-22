@@ -53,7 +53,7 @@ class ViewModel: ObservableObject {
 	var currentColumn = 0
 	var currentRow = 0
 	
-	var gameStatus: GameStatus = .initial
+//	var gameStatus: GameStatus = .initial
 	
 	@Published var message = MessageModel()
 	
@@ -78,8 +78,16 @@ extension ViewModel {
 	func addLetter(letter: String) {
 		if currentColumn == 5 { return }
 		
-		guesses[currentRow][currentColumn] = LetterModel(letter: letter, state: .emptyLetter)
-		currentColumn+=1
+		guesses[currentRow][currentColumn].letter = letter
+		
+//		guesses[currentRow][currentColumn].animateScale = true
+		
+//		DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+//			self?.guesses[self?.currentRow ?? 0][self?.currentColumn ?? 0].scale = 1.0
+//			self?.currentColumn += 1
+//		}
+		
+		currentColumn += 1
 	}
 	
 	func removeLetter() {
@@ -117,7 +125,7 @@ extension ViewModel {
 			if currentRow == 5 {
 				message.messageStatus = MessageStatus.wrongWord
 				print("[*] > \(message)")
-				gameStatus = .lose
+//				gameStatus = .lose
 				// TODO: End game
 				return
 			}
@@ -131,7 +139,7 @@ extension ViewModel {
 		if answer == currentWord {
 			message.messageStatus = MessageStatus.rightWord
 			print("[*] > \(message)")
-			gameStatus = .win
+//			gameStatus = .win
 			// TODO: End game
 		}
 	}
