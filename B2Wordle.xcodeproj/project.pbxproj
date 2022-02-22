@@ -19,6 +19,16 @@
 		D109EBBD27C405BA009660B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D109EB9227C405BA009660B6 /* Assets.xcassets */; };
 		D109EBCD27C42D8F009660B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109EBCC27C42D8F009660B6 /* ViewModel.swift */; };
 		D109EBCE27C42D8F009660B6 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D109EBCC27C42D8F009660B6 /* ViewModel.swift */; };
+		D1D5208627C5231D000DEDEF /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208527C5231D000DEDEF /* KeyboardView.swift */; };
+		D1D5208727C5231D000DEDEF /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208527C5231D000DEDEF /* KeyboardView.swift */; };
+		D1D5208927C52340000DEDEF /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208827C52340000DEDEF /* WordView.swift */; };
+		D1D5208A27C52340000DEDEF /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208827C52340000DEDEF /* WordView.swift */; };
+		D1D5208C27C523A1000DEDEF /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208B27C523A1000DEDEF /* LetterModel.swift */; };
+		D1D5208D27C523A1000DEDEF /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208B27C523A1000DEDEF /* LetterModel.swift */; };
+		D1D5208F27C523C9000DEDEF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208E27C523C9000DEDEF /* Helpers.swift */; };
+		D1D5209027C523C9000DEDEF /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5208E27C523C9000DEDEF /* Helpers.swift */; };
+		D1D5209627C52F19000DEDEF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5209527C52F19000DEDEF /* MessageView.swift */; };
+		D1D5209727C52F19000DEDEF /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5209527C52F19000DEDEF /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +62,11 @@
 		D109EBB427C405BA009660B6 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		D109EBB627C405BA009660B6 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		D109EBCC27C42D8F009660B6 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D1D5208527C5231D000DEDEF /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		D1D5208827C52340000DEDEF /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		D1D5208B27C523A1000DEDEF /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
+		D1D5208E27C523C9000DEDEF /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		D1D5209527C52F19000DEDEF /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +115,10 @@
 		D109EB8F27C405B9009660B6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				D109EB9027C405B9009660B6 /* B2WordleApp.swift */,
-				D109EB9127C405B9009660B6 /* ContentView.swift */,
-				D109EBCC27C42D8F009660B6 /* ViewModel.swift */,
+				D1D5209427C523EF000DEDEF /* Main */,
+				D1D5209127C523CE000DEDEF /* Views */,
+				D1D5209227C523DD000DEDEF /* Models */,
+				D1D5209327C523E5000DEDEF /* Helpers */,
 				D109EB9227C405BA009660B6 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -143,6 +159,42 @@
 				D109EBB627C405BA009660B6 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		D1D5209127C523CE000DEDEF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D109EB9127C405B9009660B6 /* ContentView.swift */,
+				D1D5209527C52F19000DEDEF /* MessageView.swift */,
+				D1D5208827C52340000DEDEF /* WordView.swift */,
+				D1D5208527C5231D000DEDEF /* KeyboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1D5209227C523DD000DEDEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D109EBCC27C42D8F009660B6 /* ViewModel.swift */,
+				D1D5208B27C523A1000DEDEF /* LetterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1D5209327C523E5000DEDEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5208E27C523C9000DEDEF /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D1D5209427C523EF000DEDEF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D109EB9027C405B9009660B6 /* B2WordleApp.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +356,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109EBBA27C405BA009660B6 /* ContentView.swift in Sources */,
+				D1D5208F27C523C9000DEDEF /* Helpers.swift in Sources */,
 				D109EBCD27C42D8F009660B6 /* ViewModel.swift in Sources */,
+				D1D5208627C5231D000DEDEF /* KeyboardView.swift in Sources */,
+				D1D5209627C52F19000DEDEF /* MessageView.swift in Sources */,
+				D1D5208C27C523A1000DEDEF /* LetterModel.swift in Sources */,
+				D1D5208927C52340000DEDEF /* WordView.swift in Sources */,
 				D109EBB827C405BA009660B6 /* B2WordleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,7 +371,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D109EBBB27C405BA009660B6 /* ContentView.swift in Sources */,
+				D1D5209027C523C9000DEDEF /* Helpers.swift in Sources */,
 				D109EBCE27C42D8F009660B6 /* ViewModel.swift in Sources */,
+				D1D5208727C5231D000DEDEF /* KeyboardView.swift in Sources */,
+				D1D5209727C52F19000DEDEF /* MessageView.swift in Sources */,
+				D1D5208D27C523A1000DEDEF /* LetterModel.swift in Sources */,
+				D1D5208A27C52340000DEDEF /* WordView.swift in Sources */,
 				D109EBB927C405BA009660B6 /* B2WordleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
